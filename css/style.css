@@ -1,1 +1,203 @@
-/* Denna fil skall innehålla din CSS kod */
+body {
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.534);
+    font-size: medium;
+}
+.gridWrapper {
+    display: grid;
+    height: 150vh;
+    grid-template-areas:
+    "he he he he na"
+    "dv dv dv dv dv"
+    "dv dv dv dv dv"
+    "se se se se se"
+    "ft ft ft ft ft";
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+}
+
+.header {
+    grid-area: he;
+}
+
+.rubrikText {
+    margin-left: 20%;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.rubrikText2 {
+    margin-left: 20%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5rem;
+}
+.saleBilder {
+    grid-area: dv;
+    display: grid;
+    grid-template-areas:
+    "d1 d2"
+    "d3 d4";
+    padding: 40px;
+}
+.div1 {
+    grid-area: d1;
+    
+}
+.div2 {
+    grid-area: d2;
+    background-color: cyan;
+}
+.div3 {
+    grid-area: d3;
+    background-color: darkgreen;
+}
+.div4 {
+    grid-area: d4;
+    background-color: darkred;
+}
+
+.merBilder {
+    grid-area: se;
+    display: grid;
+    grid-template-areas:
+    "d5 d6 d7";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.div5 {
+    grid-area: d5;
+    background-color: darkslategrey;
+}
+.div6{
+    grid-area: d6;
+    background-color: gold;
+}
+    
+
+.div7 {
+    grid-area: d7;
+    background-color: greenyellow;
+}
+
+.images {
+    height: autopx;
+    width: 100%;
+    height: 60%;
+   
+}
+
+.footer {
+    grid-area: ft;
+    display: grid;
+    grid-template-areas:
+    "cu cs ku";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.contactUs {
+    grid-area: cu;
+    background-color: hotpink;
+}
+.costumer {
+    grid-area: cs;
+    background-color: indigo;
+}
+.keepUp {
+    grid-area: ku;
+    background-color: lightblue;
+}
+
+
+
+.nav {
+    font-family: 'Julius Sans One', sans-serif;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+
+
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 1rem;
+    height: 70vh;
+    top: -100vh;
+    background-color: rgba(255, 209, 209, 0.568);
+    width: 25%;
+    transition: all 0.2s;
+    text-align: left;
+    
+}
+
+
+.navActive {
+transform: translateY(100vh);
+margin-top: 10%;
+}
+
+.navLinks li {
+list-style: none;
+}
+
+.navLinks a {
+color: rgb(0, 0, 0);
+text-decoration: none;
+letter-spacing: 3px;
+}
+
+
+/* HÄR HAR JAG GJORT NÅGOT FEL. DET GÖR ATT JAG INTE KAN ÖPPNA MENYN NÄR KASSEN ÄR DÄR: */
+
+
+/* Menyn */
+
+.burger div {
+ 
+width: 25px;
+height: 3px;
+background-color: rgb(0, 0, 0);
+margin: 5px;
+border-radius: 10%;
+transition: all 0,3s;
+}
+
+
+.wrapper {
+grid-area: na;
+}
+.burger {
+cursor: pointer;
+margin-left: 220px;
+
+padding-top: 8%;
+}
+
+.toggle #line1 {
+    
+transform: rotate(-45deg) translate(-5px, 6px);
+right: 0px;
+}
+
+.toggle #line2 {
+   
+opacity: 0;
+}
+
+.toggle #line3 {
+    
+transform: rotate(45deg) translate(-5px, -6px);
+
+}  
+
+.kassa {
+    grid-area: na;
+    
+}
+.kundkorg {
+    height: 10%;
+    max-width: 10%;
+    height: auto;
+}
