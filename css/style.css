@@ -5,17 +5,18 @@ body {
 }
 .gridWrapper {
     display: grid;
-    height: 150vh;
+    height: 100vh;
     grid-template-areas:
     "he he he he na"
-    "dv dv dv dv dv"
     "dv dv dv dv dv"
     "se se se se se"
     "ft ft ft ft ft";
     grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
 }
 
+
+/* Headern start */
 .header {
     grid-area: he;
 }
@@ -34,79 +35,11 @@ body {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 1.5rem;
 }
-.saleBilder {
-    grid-area: dv;
-    display: grid;
-    grid-template-areas:
-    "d1 d2"
-    "d3 d4";
-    padding: 40px;
-}
-.div1 {
-    grid-area: d1;
-    
-}
-.div2 {
-    grid-area: d2;
-    background-color: cyan;
-}
-.div3 {
-    grid-area: d3;
-    background-color: darkgreen;
-}
-.div4 {
-    grid-area: d4;
-    background-color: darkred;
-}
 
-.merBilder {
-    grid-area: se;
-    display: grid;
-    grid-template-areas:
-    "d5 d6 d7";
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.div5 {
-    grid-area: d5;
-    background-color: darkslategrey;
-}
-.div6{
-    grid-area: d6;
-    background-color: gold;
-}
-    
 
-.div7 {
-    grid-area: d7;
-    background-color: greenyellow;
-}
 
-.images {
-    height: autopx;
-    width: 100%;
-    height: 60%;
-   
-}
 
-.footer {
-    grid-area: ft;
-    display: grid;
-    grid-template-areas:
-    "cu cs ku";
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.contactUs {
-    grid-area: cu;
-    background-color: hotpink;
-}
-.costumer {
-    grid-area: cs;
-    background-color: indigo;
-}
-.keepUp {
-    grid-area: ku;
-    background-color: lightblue;
-}
+
 
 
 
@@ -118,12 +51,6 @@ body {
 }
 
 
-.komigen {
-    align-items: flex-start;
-}
-
-
-
 .navLinks {
     display: flex;
     flex-direction: column;
@@ -132,9 +59,9 @@ body {
     right: 1rem;
     height: 70vh;
     top: -100vh;
-    background-color: rgba(255, 209, 209, 0.568);
-    width: 25%;
+    background-color: rgba(255, 214, 195, 0.712);
     transition: all 0.2s;
+    padding: 1rem;
     
 }
 
@@ -155,15 +82,14 @@ letter-spacing: 3px;
 }
 
 
-/* HÄR HAR JAG GJORT NÅGOT FEL. DET GÖR ATT JAG INTE KAN ÖPPNA MENYN NÄR KASSEN ÄR DÄR: */
 
 
 /* Menyn */
 
 .burger div {
  
-width: 55%;
-height: 3px;
+width: 50%;
+height: 2px;
 background-color: rgb(0, 0, 0);
 margin: 5px;
 border-radius: 10%;
@@ -174,16 +100,17 @@ transition: all 0,3s;
 .wrapper {
 grid-area: na;
 }
+
 .burger {
 cursor: pointer;
 margin-left: 75%;
-
+height: 1.5px;
 padding-top: 8%;
 }
 
 .toggle #line1 {
     
-transform: rotate(-45deg) translate(-5px, 6px);
+transform: rotate(-45deg) translate(-5px, 8px);
 right: 0px;
 }
 
@@ -194,7 +121,7 @@ opacity: 0;
 
 .toggle #line3 {
     
-transform: rotate(45deg) translate(-5px, -6px);
+transform: rotate(45deg) translate(-2px, -5px);
 
 }  
   
@@ -205,4 +132,106 @@ transform: rotate(45deg) translate(-5px, -6px);
     height: auto;
     padding-left: 40%;
     padding-top: 5%;
+}
+
+/* Headern end*/
+
+.saleBilder {
+    grid-area: dv;
+    display: grid;
+    grid-template-areas:
+    "d1 d2"
+    "d3 d4";
+    padding: 40px;
+}
+.div1 {
+    grid-area: d1;
+   padding-right: 0.25rem;
+}
+.div2 {
+    grid-area: d2;
+}
+.div3 {
+    grid-area: d3;
+}
+.div4 {
+    grid-area: d4;  
+}
+
+.bildd {
+    height: 50%;
+    width: 100%;
+}
+
+.merBilder {
+    grid-area: se;
+    display: grid;
+    grid-template-areas:
+    "d5 d6 d7";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.div5 {
+    grid-area: d5;
+  
+}
+.div6{
+    grid-area: d6;
+   
+}
+.div7 {
+    grid-area: d7;
+   
+}
+
+.images {
+
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+
+
+
+
+
+
+.footer {
+    grid-area: ft;
+    display: grid;
+    grid-template-areas:
+    "cu cs ku";
+    grid-template-columns: 1fr 1fr 1fr;
+    font-weight: bolder;
+
+}
+.contactUs {
+    grid-area: cu;
+
+    padding-left: 5%;
+    padding-right: 5px;
+}
+.costumer {
+    grid-area: cs;
+ 
+    padding-left: 5%;
+    padding-right: 5px;
+}
+.keepUp {
+    grid-area: ku;
+
+    padding-left: 5%;
+    padding-right: 5px;
+}
+
+.fottext {
+    font-family: 'Julius Sans One', sans-serif;
+}
+.footertext {
+font-family: 'Source Sans Pro', sans-serif;;
+}
+.instagramlogo {
+    width: 2rem;
+    height: auto;
 }
